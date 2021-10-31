@@ -36,17 +36,15 @@ body > h1{
     position:fixed;
     top:10%;
     color:var(--primary);
-    margin-left:clamp(20vw, 30vw,50vw);
-    margin-right:clamp(20vw,30vw, 50vw);
-    align-self: center;
+    width:99vw;
     text-align: center;
     font-family: sans-serif;
     font-size: 3rem;
+    user-select: none;
     text-transform: uppercase;
     transition: ease-in 300ms;
-    cursor:pointer;
 }
-body > h1:hover{
+body > h1.minimized:hover{
     color: #ff0;
 }
 body > h1.minimized{
@@ -54,6 +52,7 @@ body > h1.minimized{
     left:5px;
     width:clamp(20vw,22vw, 40vw);
     font-size:2rem;
+    cursor:pointer;
 }
 #social{
     width:70vw;
