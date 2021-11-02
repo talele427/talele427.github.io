@@ -1,3 +1,6 @@
+var vw = window.innerWidth/100;
+var vh = window.innerHeight/100;
+
 function checkScroll(){
     setTimeout(function(){
         if(window.pageYOffset>0){
@@ -19,5 +22,31 @@ function checkScroll(){
     },500)
 }
 
-checkScroll();
+// checkScroll();
+
+$("#menu").click(function(){
     
+    if(document.querySelector("#menu-div").style.display=="grid"){
+        $("#menu-div").css("display", "none");
+    }else{
+        $("#menu-div").css("display","grid");
+    }
+})
+    
+function checkScroll2(){
+    console.log(window.pageYOffset);
+    setTimeout(function(){
+        if(window.pageYOffset>(3*vh)){
+            $("body > h1").addClass('minimized');
+            $("#social").addClass('minimized');
+            $("#social").children().addClass('minimized');
+        }else if(window.pageYOffset==0){
+            $("body > h1").removeClass('minimized');
+            $("#social").removeClass('minimized');
+            $("#social").children().removeClass('minimized');
+        }
+        checkScroll2();
+    },500)
+}
+
+checkScroll2();

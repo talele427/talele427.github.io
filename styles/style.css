@@ -22,10 +22,30 @@ p{
     border-radius: 10px;
     font-family: sans-serif;
     cursor:pointer;
-    z-index: 5;
+    user-select: none;
+    z-index: 15;
 }
 #menu:hover{
     background:#ff0;
+}
+#menu-div{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background: #add8;
+    z-index: 10;
+    display:none;
+    grid-template-rows: 20vh 60vh 20vh;
+    grid-template-columns: 100vw;
+    place-items: center;
+}
+#menu-div > div{
+    grid-row:2/3;
+    background: #012;
+    width:50vw;
+    height:60vh;
 }
 .section {
     height: 100vh;
