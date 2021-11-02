@@ -47,16 +47,15 @@ body > h1.minimized{
     font-size:2rem;
 }
 #social{
-    width:70vw;
+    width:55vw;
     position:fixed;
     bottom:0;
-    left:15vw;
-    height:15vh;
-    background:#3337;
+    left:22vw;
+    height:10vh;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(7,10vw);
-    grid-template-rows: 15vh;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 10vh;
     place-items: center;
     transition:ease-in 820ms;
     border-radius: 20px 20px 0px 0px;
@@ -66,21 +65,22 @@ body > h1.minimized{
     height:7vh;
     width:28vw;
     left:5vw;
-    grid-template-columns: repeat(7,4vw);
+    grid-template-columns: repeat(7,1fr);
     grid-template-rows: 7vh;
+    background:#3337;
 }
 .icon{
-    width:8vh;
-    height:8vh;
-    transition:ease-in 300ms;
+    width:4vw;
+    height:4vw;
+    transition:ease-in 820ms;
+    
     cursor:pointer;
-    filter:invert(1);
+    filter:invert(0);
 }
 .icon.minimized{
     width:4vh;
     height:4vh;
 }
 .icon:hover{
-    filter:invert(0);
-    transform: translateY(-20%);
+    filter:invert(1);
 }
