@@ -17,6 +17,29 @@ p{
     place-items: center;
     position:relative;
 }
+
+
+body > h1{
+    position:fixed;
+    top:5%;
+    color:var(--primary);
+    width:99vw;
+    text-align: center;
+    font-size: 5rem;
+    user-select: none;
+    text-transform: uppercase;
+    z-index:3;
+    font-family: sans-serif;
+    transition:ease-in-out 820ms;
+}
+body > h1.minimized{
+    top:5px;
+    left:5px;
+    width:clamp(20vw,22vw, 40vw);
+    font-size:2rem;
+}
+
+
 #landing{
     
 }
@@ -27,32 +50,56 @@ p{
     height:160vh;
     object-fit: cover;
 }
-body > h1{
-    position:fixed;
-    top:5%;
-    color:var(--primary);
-    width:99vw;
-    text-align: center;
-    font-size: 5rem;
-    user-select: none;
-    text-transform: uppercase;
-    z-index:2;
-    font-family: sans-serif;
-    transition:ease-in-out 820ms;
-}
-body > h1.minimized{
-    top:5px;
-    left:5px;
-    width:clamp(20vw,22vw, 40vw);
-    font-size:2rem;
-}
+    #latest{
+        width:55vw;
+        height:60vh;
+        position:absolute;
+        top:100vh;
+        left:22vw;
+        z-index:2;
+        display:grid;
+        grid-template-columns: 35vw 20vw;
+        grid-auto-rows:60vh;
+        
+        place-items: center;
+    }
+    #latest > img{
+        width:12vw;
+        height:12vw;
+    }
+    #latest-text{
+        height:20vw;
+        width:20vw;
+    }
+    #latest-text > h1{
+        text-transform: uppercase;
+        font-size:2rem;
+    }
+    #latest-text > h2{
+        text-transform: uppercase;
+        font-size:2rem;
+    }
+    #other-music{
+        width:29vw;
+        height:60vh;
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+        place-items: center;
+    }
+    .thumbnail{
+        width:17vh;
+        height:17vh;
+    }
+
+
 #social{
     width:55vw;
     position:fixed;
     bottom:0;
     left:22vw;
     height:10vh;
-    z-index: 2;
+    z-index: 3;
     display: grid;
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: 10vh;

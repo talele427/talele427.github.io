@@ -38,12 +38,15 @@ function checkScroll2(){
     setTimeout(function(){
         if(window.pageYOffset>(3*vh)){
             $("body > h1").addClass('minimized');
-            $("#social").addClass('minimized');
-            $("#social").children().addClass('minimized');
         }else if(window.pageYOffset==0){
             $("body > h1").removeClass('minimized');
+        }
+        if(window.pageYOffset>(50*vh)){
+            $("#social").addClass('minimized');
+            $(".icon").addClass('minimized');
+        }else if(window.pageYOffset==0){
             $("#social").removeClass('minimized');
-            $("#social").children().removeClass('minimized');
+            $(".icon").removeClass('minimized');
         }
         checkScroll2();
     },500)
