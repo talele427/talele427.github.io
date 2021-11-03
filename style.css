@@ -40,9 +40,7 @@ body > h1.minimized{
 }
 
 
-#landing{
-    
-}
+
 #landing > img{
     width:55vw;
     position:absolute;
@@ -80,11 +78,11 @@ body > h1.minimized{
         border-radius: 15px;
         padding:5px;
     }
-    #latest img{
+    #latest > :first-child > img{
         width:12vw;
         height:12vw;
     }
-    #latest p{
+    #latest > :first-child > p{
         font-weight: bold;
         user-select: none;
     }
