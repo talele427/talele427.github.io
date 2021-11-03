@@ -21,7 +21,7 @@ p{
 
 body > h1{
     position:fixed;
-    top:5%;
+    top:3%;
     color:var(--primary);
     width:99vw;
     text-align: center;
@@ -63,9 +63,30 @@ body > h1.minimized{
         
         place-items: center;
     }
-    #latest > img{
+    #latest > :first-child{
+        width:35vw;
+        height:60vh;
+        display:grid;
+        place-items: center;
+        grid-template-rows: 1fr 4fr 2fr;
+    }
+    #latest h1{
+        font-family: sans-serif;
+        font-style: italic;
+        user-select: none;
+    }
+    #latest h1:hover{
+        background-color: #fff8;
+        border-radius: 15px;
+        padding:5px;
+    }
+    #latest img{
         width:12vw;
         height:12vw;
+    }
+    #latest p{
+        font-weight: bold;
+        user-select: none;
     }
     #latest-text{
         height:20vw;
