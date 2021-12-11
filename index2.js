@@ -42,22 +42,22 @@ setInterval(function(){
 },250);
 
 function fixImageSize(scroll,pScroll){
-  if(scroll<(200*vh)){
-    let s = scroll/(200*vh);
+  if(scroll<(150*vh)){
+    let s = scroll/(150*vh);
     let w = parseInt(ramil.style.width);
     ramil.style.width = (100 - (25*s))+"vw";
     ramil.style.height=(100 - (25*s))+"vw";
-    ramil.style.top=(120*s*2)+"vh";
+    ramil.style.top=(80*s*2)+"vh";
     ramil.style.overlow_y="hidden";
     title.style.width = (100 - (75*s))+"vw";
     title.style.top = (50 - (50*s))+"vh";
     title.style.fontSize = (100 - (75*s))+"px";
     title.style.letterSpacing = (35 - (25*s))+"px";
-  }else if(scroll>(200*vh)){
+  }else if(scroll>(150*vh)){
     let s = 1;
     ramil.style.width = (100 - (25*s))+"vw";
     ramil.style.height=(100 - (25*s))+"vw";
-    ramil.style.top=(240*s)+"vh";
+    ramil.style.top=(160*s)+"vh";
     ramil.style.overlow_y="hidden";
     title.style.width = (100 - (75*s))+"vw";
     title.style.top = (50 - (50*s))+"vh";
