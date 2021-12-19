@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding:0px;
+    overflow-x: hidden;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -41,4 +42,11 @@ input[type=number] {
     }
 #output{
     background:green;
+    padding:30px;
+    display:grid;
+    place-items: center;
 }
+    #output p{
+        width:80%;
+        height:100%;
+    }

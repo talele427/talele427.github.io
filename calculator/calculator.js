@@ -8,6 +8,8 @@ var duration = document.getElementById("duration");
 var cost = document.getElementById("cost");
 var submit = document.getElementById("submit");
 
+var result = document.getElementById("result");
+
 submit.addEventListener("click", function(){
     n = parseInt(coins.value);
     p = parseInt(price.value);
@@ -17,7 +19,6 @@ submit.addEventListener("click", function(){
     c = parseInt(cost.value);
     console.log(n,p,s,d,t,c);
 
-    
     a = n * p;
     compound();
 })
@@ -36,14 +37,18 @@ function compound(){
         if(j>t/2){
 
         }else{
-            if(a>f){
+            
+    
+        }
+        if(a>f){
                 f = a;
                 l = j;
             }
-    
-        }
         console.log(j,a);
+        result.innerHTML+="compounded every "+j.toString()+" days: "+a.toString()+"<br><br>";
+        
         a = n * p;
     }
     console.log(f,l);
+    result.innerHTML+="max profit: "+f.toString()+"<br>optimal compounding frequency: "+l.toString()+" day <br><br>";
 }
