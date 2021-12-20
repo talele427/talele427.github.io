@@ -16,7 +16,7 @@ submit.addEventListener("click", function(){
     s = parseInt(rate.value);
     d = parseInt(frequency.value);
     t = parseInt(duration.value);
-    c = parseInt(cost.value);
+    c = parseFloat(cost.value);
     console.log(n,p,s,d,t,c);
 
     a = n * p;
