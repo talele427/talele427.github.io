@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 *{
     margin:0px;
@@ -35,7 +36,7 @@ img{
     object-fit: cover;
     height:100vw;
     position:absolute;
-    transition: 550ms linear;
+    transition: 750ms ease-in;
     top:0vh;
     overflow-y:hidden;
 } 
@@ -70,21 +71,64 @@ img{
   left:0vh;
   z-index:10;
 }
+
+#socials{
+  position:fixed;
+  bottom:0px;
+  width:100vw;
+  left:0px;
+  height:10vh;
+  z-index: 15;
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  place-items: center;
+}
+.social{
+  height: 9vh;
+  width: 9vh;
+  position:relative;
+}
+
 body{
     height:400vh
 }
+.container {
+  scroll-snap-type: y mandatory;
+}
 
-  .vertical {
-    color: white;
-    font: 32px "Arial";
-  }
+.child {
+  scroll-snap-align: start;
+}
+
+#about{
+  background:#fcd24f;
+  position:absolute;
+  top:300vh;
+  width:100vw;
+  height:100vh;
+  z-index:4;
+  display:grid;
+  grid-template-columns: 50vw 40vw;
+}
+ 
+#about p{
+  font-family: "Montserrat";
+  text-align: justify;
+  font-size: 1.3rem;
+  padding-top: 15vh;
+  padding-left: 15vh;
   
-  .extra {
-    width: 350px;
-    height: 350px;
-    margin-top: 10px;
-    border: 4px solid rgb(20, 20, 120);
-    text-align: center;
-    padding: 20px;
-  }
-  
+}
+
+#about h1{
+  color:black;
+  position:absolute;
+  top:70vh;
+  right:0vh;
+  font-family:"Bodoni Moda";
+  font-size:3.5rem;
+  padding-left:20px;
+  width:40vw;
+  letter-spacing: 5px;
+  text-transform:uppercase;
+}

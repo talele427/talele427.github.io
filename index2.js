@@ -28,6 +28,8 @@ let decreasingColor = "rgba(255, 255, 255, ratio)";
 
 let ramil = document.getElementById("background");
 let title = document.getElementById("title");
+let social = document.getElementById("socials");
+let socials = document.querySelectorAll(".social");
 ramil.style.width="100vw";
 ramil.style.height="200vh";
 title.style.fontSize = 100+"px";
@@ -47,22 +49,33 @@ function fixImageSize(scroll,pScroll){
     let w = parseInt(ramil.style.width);
     ramil.style.width = (100 - (25*s))+"vw";
     ramil.style.height=(100 - (25*s))+"vw";
-    ramil.style.top=(80*s*2)+"vh";
+    ramil.style.top=(100*s*2)+"vh";
     ramil.style.overlow_y="hidden";
     title.style.width = (100 - (75*s))+"vw";
     title.style.top = (50 - (50*s))+"vh";
     title.style.fontSize = (100 - (75*s))+"px";
     title.style.letterSpacing = (35 - (25*s))+"px";
-  }else if(scroll>(150*vh)){
+    social.style.width=(100 - (80 * s))+"vw";
+    socials.forEach((obj)=>{
+      obj.style.width=(9-(6*s))+"vh";
+      obj.style.height=(9-(6*s))+"vh";
+    })
+
+  }else if(scroll>(150*vh)&&(scroll<(250*vh))){
     let s = 1;
     ramil.style.width = (100 - (25*s))+"vw";
     ramil.style.height=(100 - (25*s))+"vw";
-    ramil.style.top=(160*s)+"vh";
+    ramil.style.top=(200*s)+"vh";
     ramil.style.overlow_y="hidden";
     title.style.width = (100 - (75*s))+"vw";
     title.style.top = (50 - (50*s))+"vh";
     title.style.fontSize = (100 - (75*s))+"px";
     title.style.letterSpacing = (35 - (25*s))+"px";
+    social.style.width=(100 - (80 * s))+"vw";
+    socials.forEach((obj)=>{
+      obj.style.width=(9-(6*s))+"vh";
+      obj.style.height=(9-(6*s))+"vh";
+    })
   }
 }
 
