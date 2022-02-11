@@ -6,129 +6,95 @@
     padding:0px;
     overflow-x:hidden;
 }
-/* .section{
-    width:100vw;
-    height:200vh;
-    overflow-x:hidden;
-}
-body{
-    background:#fcd24f;
-    font-family:sans-serif;
-}*/
-#title{
-    text-transform:uppercase;
-    width:100vw;
-    font-family:sans-serif;
-    font-size: 4rem;
-    padding-top: 2vh;
-    padding-left: 2vw;
-    text-align: left;
+
+.menu{
     position:fixed;
-    letter-spacing: 35px;
-    transition: 550ms linear;
-    top:50vh;
+    top:2vh;
+    right:2vw;
+
+}
+.menu > h1{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    letter-spacing: 2px;
+    width:25vw;
+    text-align: center;
+    color:#504e4e
+}
+.menu > div{
+    width:25vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.menu > div > p{
+    font-family: 'Open Sans';
+    color:#949393;
+    font-weight: 900;
+}
+
+.socials{
+    position:absolute;
+    top:20vh;
     left:0vw;
-    z-index:5;
+    width:5vw;
+    height:60vh;
+    display:grid;
+    place-items: center;
+    grid-template-rows: repeat(1fr, 6);
 }
-img{
-    right:0vw;
+.socials > img{
+    width:3vw;
+    height:3vw;
+    
+}
+
+.landing{
     width:100vw;
+    height:120vw;
+}
+.landing > img{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:120vw;
     object-fit: cover;
-    height:100vw;
-    position:absolute;
-    transition: 750ms ease-in;
-    top:0vh;
-    overflow-y:hidden;
-} 
-#box {
-    background-color: #fcd24f;
-    overflow-y:hidden;
-    width: 100vw;
-    height: 300vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:absolute;
-  }
-  
-#presave h1{
-  color:black;
-  position:absolute;
-  top:250vh;
-  left:0vh;
-  font-family:"Bodoni Moda";
-  font-size:3.5rem;
-  padding-left:20px;
-  width:30vw;
-  text-transform:uppercase;
+    z-index:-1;
 }
-#presave p{
-  text-transform: uppercase;
-  font-style: italic;
-  position:absolute;
-  top:280vh;
-  padding-left:20px;
-  left:0vh;
-  z-index:10;
+.landing > div{
+    display:grid;
+    position: absolute;
+    top:70vw;
+    left:2vw;
+    grid-template-rows: 5fr 2fr 1fr;
+}
+.landing > div > h1{
+    font-family: 'Bodoni Moda';
+    font-size: 4rem;
+}
+.landing > div > h2{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 2rem;
+    position:relative;
+    top:40%;
+    
+}
+.landing > div > h3{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    left:3px;
+    font-size:1rem;
 }
 
-#socials{
-  position:fixed;
-  bottom:0px;
-  width:100vw;
-  left:0px;
-  height:10vh;
-  z-index: 15;
-  display:grid;
-  grid-template-columns: repeat(7,1fr);
-  place-items: center;
-}
-.social{
-  height: 9vh;
-  width: 9vh;
-  position:relative;
-}
-
-body{
-    height:400vh
-}
-.container {
-  scroll-snap-type: y mandatory;
-}
-
-.child {
-  scroll-snap-align: start;
-}
-
-#about{
-  background:#fcd24f;
-  position:absolute;
-  top:300vh;
-  width:100vw;
-  height:100vh;
-  z-index:4;
-  display:grid;
-  grid-template-columns: 50vw 40vw;
-}
- 
-#about p{
-  font-family: "Montserrat";
-  text-align: justify;
-  font-size: 1.3rem;
-  padding-top: 15vh;
-  padding-left: 15vh;
-  
-}
-
-#about h1{
-  color:black;
-  position:absolute;
-  top:70vh;
-  right:0vh;
-  font-family:"Bodoni Moda";
-  font-size:3.5rem;
-  padding-left:20px;
-  width:40vw;
-  letter-spacing: 5px;
-  text-transform:uppercase;
+.music{
+    background-color: #504e4e;
+    width:100vw;
+    height:100vh;
 }
