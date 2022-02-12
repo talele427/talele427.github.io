@@ -11,7 +11,7 @@
     position:fixed;
     top:2vh;
     right:2vw;
-
+    z-index:10;
 }
 .menu > h1{
     font-size: 2.2rem;
@@ -95,6 +95,89 @@
 
 .music{
     background-color: #504e4e;
+    position:relative;
+    width:100vw;
+    height:150vh;
+}
+.music > div{
+    width:100vw;
+    height:150vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75vh 75vh;
+}
+.music > div > div{
+    display:grid;
+    height:50vh;
+    align-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr 2fr;
+    place-items: center;
+}
+.music > div > div > p{
+    font-family: 'Open Sans';
+    text-align: left;
+    width:60%;
+    color:white;
+    font-size: 1.5rem;
+}
+.aa{
+    width:18vw;
+    height:18vw;
+
+}
+.music > p{
+    position:absolute;
+    width:100%;
+    top:75vh;
+    text-align: center;
+    font-family: 'Open Sans';
+    color:white;
+}
+
+.about{
     width:100vw;
     height:100vh;
+    background:#504e4e;
+    display:grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows:100vh;
+}
+.about>img{
+    width:35vw;
+    height:100vh;
+    object-fit: cover;
+}
+.about>div{
+    width:65vw;
+    height:100vh;
+    position:relative;
+}
+.about > div > div{
+    position:absolute;
+    top:20vh;
+    width:50vw;
+    height:12vh;
+    background:#c99a70;
+    display:grid;
+    align-items:center;
+}
+.about > div > div > h1{
+    font-family: 'Bodoni Moda';
+    text-transform: uppercase;
+    color:white;
+    font-size:3rem;
+    margin-left:100px;
+    font-weight:200;
+}
+.about > div > p{
+    position:absolute;
+    top:35vh;
+    font-size:1rem;
+    letter-spacing: 2px;
+    width:calc(50vw - 100px);
+    margin-left:100px;
+    text-align: justify;
+    font-family: 'Montserrat';
+    color:white;
 }
