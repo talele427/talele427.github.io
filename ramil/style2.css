@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
 
 *{
     margin:0px;
@@ -13,26 +15,30 @@
     right:2vw;
     z-index:10;
 }
+.menu:hover{
+    background:#FFFC;
+    user-select:none;
+    border-radius: 10px;
+}
 .menu > h1{
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-family: 'Open Sans';
-    font-weight: 800;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     width:25vw;
     text-align: center;
-    color:#504e4e
+    color:#504e4e;
 }
 .menu > div{
     width:25vw;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    grid-template-columns: 2fr 1fr 2fr;
+    place-items:center;
 }
 .menu > div > p{
     font-family: 'Open Sans';
+    letter-spacing:3px;
     color:#949393;
-    font-weight: 900;
 }
 
 .socials{
@@ -180,4 +186,229 @@
     text-align: justify;
     font-family: 'Montserrat';
     color:white;
+}
+
+.latest{
+    width:100vw;
+    height:100vh;
+    background-color: #504e4e;
+    display:grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-rows: 25vh 75vh;
+    overflow-y: hidden;
+}
+.latest > h1{
+    font-family: 'Bodoni Moda';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:white;
+    font-size: 2.5rem;
+    position:relative;
+    width:100vw;
+    height:10vh;
+    text-align: center;
+    align-self: flex-end;
+}
+.latest > h1::before{
+    content:"";
+    position:absolute;
+    background-color: #c99a70;
+    width:35vw;
+    height:5vh;
+    top:2.5vh;
+    left:0vw;
+}
+.latest > div{
+    display:grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 70vh;
+    overflow-y:hidden;
+}
+.latest > div > img{
+    width:25vw;
+    justify-self: center;
+    margin-bottom: 10vh;
+    margin-left:10vw;
+    height:25vw;
+}
+.latest > div > div{
+    display:grid;
+    overflow-y:hidden;
+    grid-template-columns: 30vw;
+    grid-template-rows: 15vh 25vh 8vh 5vh;
+}
+.latest > div > div > p{
+    font-family: 'Montserrat';
+    text-align: justify;
+    letter-spacing: 2px;
+    color:white;
+}
+.latest > div > div > h1{
+    font-family: 'Bodoni Moda';
+    color:white;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.latest > div > div > h2{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    align-self: flex-end;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    letter-spacing: 5px;
+    color:white;
+}
+.latest > div > div > h3{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:white;
+}
+
+.other{
+    width:100vw;
+    height:150vh;
+    background-color: #504e4e;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 140vh;
+    overflow-y: hidden;
+}
+.other > h1{
+    font-family: 'Bodoni Moda';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:white;
+    font-size: 2.5rem;
+    position:relative;
+    width:100vw;
+    height:10vh;
+    text-align: center;
+    align-self: flex-end;
+}
+.other > h1::before{
+    content:"";
+    position:absolute;
+    background-color: #c99a70;
+    width:38vw;
+    height:5vh;
+    top:2.5vh;
+    left:0vw;
+}
+.other > div{
+    display:grid;
+    margin:0px 100px;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.other > div > img{
+    width:25vw;
+    height:25vh;
+    object-fit: cover;
+}
+.other > div > iframe{
+    width:35vw;
+    object-fit: cover;
+}
+
+.press{
+    width:100vw;
+    height:100vh;
+    background-color: #504e4e;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 90vh;
+    overflow-y: hidden;
+}
+.press > h1{
+    font-family: 'Bodoni Moda';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:white;
+    font-size: 2.5rem;
+    position:relative;
+    width:100vw;
+    height:10vh;
+    text-align: center;
+    align-self: flex-end;
+}
+.press > h1::before{
+    content:"";
+    position:absolute;
+    background-color: #c99a70;
+    width:38vw;
+    height:5vh;
+    top:2.5vh;
+    left:0vw;
+}
+.press > div{
+    display:grid;
+    margin:0px 100px;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:90vh;
+
+}
+.press > div > div{
+    display:grid;
+    place-items: center;
+    height:90vh;
+    grid-template-rows: 50vh 20vh 20vh;
+    /* width:calc(50vw - 100px); */
+}
+.press > div > div > img{
+    width:20vw;
+    height:50vh;
+    object-fit: cover;
+}
+.press > div > div > h1{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    position:relative;
+    align-self:flex-start;
+    top:40%;
+    color:white;
+}
+.press > div > div > h2{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    left:3px;
+    width:25vw;
+    align-self:flex-start;
+    text-align:center;
+    font-size:1rem;
+    color:white;
+}
+
+.contact{
+    width:100vw;
+    height:50vh;
+    background-color: #504e4e;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 20vh;
+    overflow-y: hidden;
+    place-items: center;
+}
+.contact > p{
+    color:white;
+    font-family: 'Montserrat';
+}
+.contact > div{
+    width:55vw;
+    place-items:center;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.contact > div > img{
+    width:5vw;
+    height:5vw;
+    filter:contrast(10%);
+    object-fit: cover;
 }
