@@ -20,6 +20,11 @@
     user-select:none;
     border-radius: 10px;
 }
+.dark:hover{
+    background:#444C;
+    user-select:none;
+    border-radius: 10px;
+}
 .menu > h1{
     font-size: 2rem;
     text-transform: uppercase;
@@ -28,6 +33,7 @@
     width:25vw;
     text-align: center;
     color:#504e4e;
+    transition:ease-in 1000ms;
 }
 .menu > div{
     width:25vw;
@@ -37,6 +43,7 @@
 }
 .menu > div > p{
     font-family: 'Open Sans';
+    transition:ease-in 1000ms;
     letter-spacing:3px;
     color:#949393;
 }

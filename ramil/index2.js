@@ -54,5 +54,13 @@ function pauseAllMusic(){
 }
 
 setInterval(()=>{
-    console.log(title)
-},2000)
+    if(window.scrollY>=(110*vw)){
+        title.style.color="#1b1b1b";
+        $('.menu > div > p').css('color',"white");
+        document.querySelector('.menu').classList.add('dark');
+    }else{
+        title.style.color="#504e4e";
+        $('.menu > div > p').css('color',"#949393");
+        document.querySelector('.menu').classList.remove('dark');
+    }
+},200)
