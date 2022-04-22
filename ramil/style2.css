@@ -32,6 +32,7 @@
     letter-spacing: 3px;
     width:25vw;
     text-align: center;
+    cursor:pointer;
     color:#504e4e;
     transition:ease-in 1000ms;
 }
@@ -45,6 +46,7 @@
     font-family: 'Open Sans';
     transition:ease-in 1000ms;
     letter-spacing:3px;
+    cursor:pointer;
     color:#949393;
 }
 
@@ -110,33 +112,45 @@
     background-color: #504e4e;
     position:relative;
     width:100vw;
-    height:150vh;
+    height:100vh;
 }
 .music > div{
     width:100vw;
-    height:150vh;
+    height:100vh;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 75vh 75vh;
+    grid-template-rows: 20vh 40vh 40vh;
 }
 .music > div > div{
     display:grid;
-    height:50vh;
+    height:40vh;
     align-self: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 8fr 2fr;
+    grid-template-rows: 25vh 15vh;
     place-items: center;
 }
+/* .music > div > div:nth-child(1) > img,.music > div > div:nth-child(4) > img{
+    justify-self: flex-end;
+}
+.music > div > div:nth-child(3) > img,.music > div > div:nth-child(6) > img{
+    justify-self: flex-start;
+} */
 .music > div > div > p{
     font-family: 'Open Sans';
-    text-align: left;
-    width:60%;
+    text-align: center;
+    width:100%;
     color:white;
     font-size: 1.5rem;
 }
+
+.btn{
+    width:7vh;
+    height:7vh;
+    
+}
 .aa{
-    width:18vw;
-    height:18vw;
+    width:25vh;
+    height:25vh;
 
 }
 .music > p{
@@ -395,20 +409,23 @@
 
 .contact{
     width:100vw;
-    height:50vh;
+    height:100vh;
     background-color: #504e4e;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 20vh;
+    grid-template-rows: 50vh 50vh;
+    grid-gap: 20px;
     overflow-y: hidden;
     place-items: center;
 }
 .contact > p{
     color:white;
     font-family: 'Montserrat';
+    align-self:flex-end;
 }
 .contact > div{
     width:55vw;
+    align-self:flex-start;
     place-items:center;
     display:grid;
     grid-template-columns: repeat(6, 1fr);

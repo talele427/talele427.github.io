@@ -20,27 +20,37 @@ let vw = window.innerWidth/100;
 let vh = window.innerHeight/100;
 
 let ramil = document.getElementById("background");
-let title = document.getElementById("title");
+
 let social = document.getElementById("socials");
 let socials = document.querySelectorAll(".social");
 
 let tracklist=["bhoola", "gulmohar", "tu", "daastaan", "dhundho"]
 
-$('.music > div > div > img').click(function(){
+$('.aa').click(function(){
     let a = this.src.split('/');
     let b = a[a.length-1].split('.');
     if(b[0]!="phir"){
         pauseAllMusic();
         document.getElementById(b[0]).play();
-        $('.music > p').html("click here for the full discography")
-        if(this.classList.includes("active")){
-            document.getElementById(b[0]).pause();
-            this.classList.remove('active')
-        }else{
-            this.classList.add('active')
-        }
     }
     
+})
+
+$('.btn').click(function(){
+    let song = this.attributes.song.value;
+    let fn = this.attributes.current.value;
+    if(fn == "play"){
+        if(song!="phir"){
+            pauseAllMusic();
+            document.getElementById(song).play();
+            this.src="/ramil/images/pause.png"
+            this.attributes.current.value = "pause";
+        }
+    }else{
+        pauseAllMusic();
+        this.src="/ramil/images/play-button.png"
+        this.attributes.current.value="play";
+    }
 })
 
 function pauseAllMusic(){
@@ -53,23 +63,17 @@ function pauseAllMusic(){
     }
 }
 
-setInterval(()=>{
-    if(window.scrollY>=(110*vw)){
-        title.style.color="#1b1b1b";
-        $('.menu > div > p').css('color',"white");
-        
-        document.querySelector('.menu').classList.add('dark');
-    }else{
-        title.style.color="#504e4e";
-        $('.menu > div > p').css('color',"#949393");
-        $('#epk-title').css('color',"white");
-        document.querySelector('.menu').classList.remove('dark');
-    }
-},200)
 
-$('#epk-title').click(()=>{
+
+$('#title').click(()=>{
     window.location.href="./";
 })
 $('#epk').click(()=>{
     window.location.href="./epk.html";
+})
+$('#music').click(()=>{
+    window.location.href="./music.html";
+})
+$('#contact').click(()=>{
+    window.location.href="./contact.html";
 })
