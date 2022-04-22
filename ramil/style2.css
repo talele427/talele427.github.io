@@ -16,12 +16,12 @@
     z-index:10;
 }
 .menu:hover{
-    background:#FFFC;
+    /* background:#FFFC; */
     user-select:none;
     border-radius: 10px;
 }
 .dark:hover{
-    background:#444C;
+    /* background:#444C; */
     user-select:none;
     border-radius: 10px;
 }
@@ -418,4 +418,16 @@
     height:5vw;
     filter:contrast(10%);
     object-fit: cover;
+    transition:ease 200ms;
+    cursor:pointer;
+}
+.contact > div > img:hover{
+    filter:contrast(100%);
+}
+.socials > img{
+    cursor:pointer;
+    transition: ease 200ms;
+}
+.socials > img:hover{
+    filter:contrast(10%);
 }
