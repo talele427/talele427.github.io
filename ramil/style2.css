@@ -60,7 +60,7 @@
     place-items: center;
     grid-template-rows: repeat(1fr, 6);
 }
-.socials > img{
+.socials > a > img{
     width:3vw;
     height:3vw;
     
@@ -146,6 +146,7 @@
 .btn{
     width:7vh;
     height:7vh;
+    cursor:pointer;
     
 }
 .aa{
@@ -246,7 +247,7 @@
     grid-template-rows: 70vh;
     overflow-y:hidden;
 }
-.latest > div > img{
+.latest > div > a > img{
     width:25vw;
     justify-self: center;
     margin-bottom: 10vh;
@@ -372,19 +373,19 @@
     grid-template-rows:90vh;
 
 }
-.press > div > div{
+.press > div > div > a{
     display:grid;
     place-items: center;
     height:90vh;
     grid-template-rows: 50vh 20vh 20vh;
     /* width:calc(50vw - 100px); */
 }
-.press > div > div > img{
+.press > div > div > a > img{
     width:20vw;
     height:50vh;
     object-fit: cover;
 }
-.press > div > div > h1{
+.press > div > div > a > h1{
     font-family: 'Montserrat';
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -394,7 +395,7 @@
     top:40%;
     color:white;
 }
-.press > div > div > h2{
+.press > div > div > a > h2{
     font-family: 'Montserrat';
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -420,6 +421,7 @@
 }
 .contact > p{
     color:white;
+    font-size:3rem;
     font-family: 'Montserrat';
     align-self:flex-end;
 }
@@ -428,9 +430,9 @@
     align-self:flex-start;
     place-items:center;
     display:grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
-.contact > div > img{
+.contact > div > a > img{
     width:5vw;
     height:5vw;
     filter:contrast(10%);
@@ -441,10 +443,15 @@
 .contact > div > img:hover{
     filter:contrast(100%);
 }
-.socials > img{
+.socials > a > img{
     cursor:pointer;
     transition: ease 200ms;
 }
-.socials > img:hover{
+.socials > a > img:hover{
     filter:contrast(10%);
+}
+
+a,a:visited,a:hover{
+    text-decoration:none;
+    color:initial;
 }
